@@ -30,8 +30,8 @@ def read_int(prompt: str, min: int = 1, max: int = 5) -> int:
 
 def setup_grid(nRows: int, nCols: int) -> list:
     """Creates a 2D list of lists"""
-    grid = [ ["O"]*nRows for i in range(nCols)]                          #Empty grid
-    grid[random.randrange(0,nRows)][random.randrange(0,nCols)] = "S"     #Place the ship
+    grid = [ ["O"]*nRows for i in range(nCols)]                                #Empty grid
+    grid[random.randrange(0,nRows)][random.randrange(0,nCols)] = CHAR_SHIP     #Place the ship
     return grid
 
 def print_grid(grid: list, replaceChar: str = None, replaceWith: str = None) -> None:
